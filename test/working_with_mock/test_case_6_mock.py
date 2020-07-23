@@ -23,7 +23,6 @@ which we used using mocker fixture of pytest, but it actually utilizes modules o
 @pytest.fixture(name="mock_db")
 def get_mock_db():
     mock_db = Mock(spec=DbConnection)
-    mock_db.get_data
     return mock_db
 
 
