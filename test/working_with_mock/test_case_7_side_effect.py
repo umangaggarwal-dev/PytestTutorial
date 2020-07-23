@@ -18,7 +18,7 @@ Notice that we a re not longer using unittest library but are using "mocker" fix
 @pytest.fixture(name="process_data_stub")
 def get_process_data_stub():
     def process_data_stub(string):
-        return json.loads(string)
+        return {"string": string}
     yield process_data_stub
 
 
@@ -33,4 +33,4 @@ def test_blah_using_service(mock_service):
     test_json = "{\"test\":\"test\"}"
     blah = Foo(service=mock_service)
     output = blah.process_data(test_json)
-    assert output == {"test": "test"}
+    assert output == {"string": test_json}
