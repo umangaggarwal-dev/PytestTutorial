@@ -5,6 +5,13 @@ from tester.classes.foo import Foo
 from tester.classes.service import Service
 
 
+'''
+Since Mock does not implement any function or property of the class it copies,
+we can define a particular property using a side effect, 
+this is different from giving a certain return value, 
+because a side_effect is executed when the property of the mock instance is called,
+and returns values depending on the input/output of the side effect stub definition. 
+'''
 #side effect stub
 @pytest.fixture(name="process_data_stub")
 def get_process_data_stub():
