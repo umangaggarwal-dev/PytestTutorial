@@ -1,0 +1,10 @@
+.pytest_cache/
+test/.pytest_cache/
+test/advanced/.pytest_cache/
+test/basics/.pytest_cache/
+test/working_with_mock/.pytest_cache/
+venv/
+.idea
+tester/classes/*.pyc
+tester/__pycache__/
+tester/classes/__pycache__/
