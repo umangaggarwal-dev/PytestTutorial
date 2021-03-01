@@ -1,5 +1,7 @@
 import pytest
 import yaml
+import os
+from pathlib import Path
 from tester.pure_functions.case_2_fixtures import get_path
 
 
@@ -17,7 +19,7 @@ which should be taken care of.
 '''
 @pytest.fixture(name="test_configs")
 def get_test_configs():
-    with open("test_config.yml", 'r') as file:
+    with open(os.path.join(str(Path(__file__).parent), "test_config.yml"), 'r') as file:
         configs = yaml.load(file, Loader=yaml.FullLoader)
     return configs
 
